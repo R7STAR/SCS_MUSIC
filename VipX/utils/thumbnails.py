@@ -31,9 +31,9 @@ def add_corners(im):
     im.putalpha(mask)
 
 
-async def gen_thumb(videoid, user_id):
-    if os.path.isfile(f"cache/{videoid}_{user_id}.png"):
-        return f"cache/{videoid}_{user_id}.png"
+async def gen_thumb(videoid, chat_id):
+    if os.path.isfile(f"cache/{videoid}_{chat_id}.png"):
+        return f"cache/{videoid}_{chat_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
         results = VideosSearch(url, limit=1)
@@ -66,8 +66,8 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxyz = await app.get_profile_photos(chat_id)
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{chat_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
             wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -164,16 +164,16 @@ async def gen_thumb(videoid, user_id):
             os.remove(f"cache/thumb{videoid}.png")
         except:
             pass
-        background.save(f"cache/{videoid}_{user_id}.png")
-        return f"cache/{videoid}_{user_id}.png"
+        background.save(f"cache/{videoid}_{chat_id}.png")
+        return f"cache/{videoid}_{chat_id}.png"
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
 
 
-async def gen_qthumb(videoid, user_id):
-    if os.path.isfile(f"cache/que{videoid}_{user_id}.png"):
-        return f"cache/que{videoid}_{user_id}.png"
+async def gen_qthumb(videoid, chat_id):
+    if os.path.isfile(f"cache/que{videoid}_{chat_id}.png"):
+        return f"cache/que{videoid}_{chat_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
         results = VideosSearch(url, limit=1)
@@ -206,8 +206,8 @@ async def gen_qthumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxyz = await app.get_profile_photos(chat_id)
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{chat_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
             wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -305,9 +305,9 @@ async def gen_qthumb(videoid, user_id):
             os.remove(f"cache/thumb{videoid}.png")
         except:
             pass
-        file = f"cache/que{videoid}_{user_id}.png"
-        background.save(f"cache/que{videoid}_{user_id}.png")
-        return f"cache/que{videoid}_{user_id}.png"
+        file = f"cache/que{videoid}_{chat_id}.png"
+        background.save(f"cache/que{videoid}_{chat_id}.png")
+        return f"cache/que{videoid}_{chat_id}.png"
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
