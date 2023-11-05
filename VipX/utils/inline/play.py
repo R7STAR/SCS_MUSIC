@@ -94,7 +94,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
     elif 80 <= vip < 95:
         bar = "ﮩ❤️٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     else:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ❤️"
+        bar = "❤️ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
 
     buttons = [
         [
