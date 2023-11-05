@@ -82,7 +82,7 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = Image.open(f"VipX/assets/anonx0.png")
+        bg = Image.open(f"VipX/assets/anonx12.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -125,7 +125,7 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (450, 25),
-                f"LUCKY MUSIC PLAYING",
+                f"STARTED PLAYING",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -222,7 +222,7 @@ async def gen_qthumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = Image.open(f"VipX/assets/anonx0.png")
+        bg = Image.open(f"VipX/assets/anonx12.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
