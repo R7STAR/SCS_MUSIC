@@ -16,25 +16,25 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     vip = math.floor(percentage)
     if 0 < vip <= 10:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ♡"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ❤️"
     elif 10 < vip < 20:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ♡٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ❤️٨ـ"
     elif 20 <= vip < 30:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـ♡ﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـ❤️ﮩﮩ٨ـ"
     elif 30 <= vip < 40:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨♡ـﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨❤️ـﮩﮩ٨ـ"
     elif 40 <= vip < 50:
-        bar = "ﮩ٨ـﮩﮩ٨ـﮩ♡٨ـﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ❤️٨ـﮩﮩ٨ـ"
     elif 50 <= vip < 60:
-        bar = "ﮩ٨ـﮩﮩ٨♡ـﮩ٨ـﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨❤️ـﮩ٨ـﮩﮩ٨ـ"
     elif 60 <= vip < 70:
-        bar = "ﮩ٨ـﮩ♡ﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩ❤️ﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     elif 70 <= vip < 80:
-        bar = "ﮩ٨♡ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
+        bar = "ﮩ٨❤️ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     elif 80 <= vip < 95:
-        bar = "ﮩ♡٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
+        bar = "ﮩ❤️٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     else:
-        bar = "♡ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
+        bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ❤️"
 
     buttons = [
         [
